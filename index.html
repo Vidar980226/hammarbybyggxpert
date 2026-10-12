@@ -211,8 +211,8 @@
   footer img{height:76px;width:auto}
   footer p{font-family:var(--mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase}
 
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
+  .tona .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .tona .reveal.in{opacity:1;transform:none}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
   @media(prefers-reduced-motion:reduce){
@@ -557,7 +557,10 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -12% 0px' });
+    document.documentElement.classList.add('tona');
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    // Säkerhetsnät: visa allt efter 2,5 s även om intoningen inte startat
+    setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('in')), 2500);
   } else {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
   }
