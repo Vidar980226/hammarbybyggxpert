@@ -585,8 +585,7 @@
     const amne = 'Förfrågan via hemsidan: ' + form.typ.value;
     window.location.href = 'mailto:niklas@hammarbybyggxpert.se'
       + '?subject=' + encodeURIComponent(amne)
-      + '&body=' + encodeURIComponent(rader.join('
-'));
+      + '&body=' + encodeURIComponent(rader.join(String.fromCharCode(10)));
     msg.textContent = 'Tack ' + namn + '. Ditt e-postprogram öppnas med förfrågan ifylld — tryck Skicka där. Öppnas inget? Mejla niklas@hammarbybyggxpert.se.';
     msg.classList.add('show');
   });
