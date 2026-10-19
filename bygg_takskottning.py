@@ -31,6 +31,8 @@ EXTRA_CSS = """
   .faq summary{cursor:pointer;font-weight:600;font-size:1.05rem}
   .faq details p{margin:.7rem 0 0;color:var(--steel)}
   .wrap-smal{max-width:62rem}
+  .hero h1{font-size:clamp(2.3rem,5.2vw,4.6rem);overflow-wrap:break-word}
+  .hero-inner{gap:2.5rem}
 """
 
 MAIN = """
@@ -40,7 +42,7 @@ MAIN = """
     <div class="hero-inner">
       <div class="hero-copy">
         <p class="eyebrow">Takskottning · Istappar · Snöras · Stockholm</p>
-        <h1>Snöfria tak.<br>Säkra trottoarer.<br><em>Inga överraskningar.</em></h1>
+        <h1>Snöfria tak.<br>Säkra gator.<br><em>Hela vintern.</em></h1>
         <p class="hero-lead">
           Som fastighetsägare ansvarar ni för att snö och is på taket inte rasar ner på någon.
           Med ett säsongsavtal håller vi koll på era tak hela vintern och skottar när det behövs –
