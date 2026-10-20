@@ -103,19 +103,10 @@ MAIN = f"""
     </div>
   </section>
 
-  <section id="team" class="ram">
-    <div class="sec-head reveal">
-      <div class="dim"><span class="dim-label">02 — Teamet</span><span class="dim-rule"></span></div>
-      <h2>Det är oss<br>ni pratar med</h2>
-    </div>
-    <div class="team reveal">
-{team_html}
-    </div>
-  </section>
 
   <section id="fakta">
     <div class="sec-head reveal">
-      <div class="dim"><span class="dim-label">03 — Företagsfakta</span><span class="dim-rule"></span></div>
+      <div class="dim"><span class="dim-label">02 — Företagsfakta</span><span class="dim-rule"></span></div>
       <h2>Uppgifter för<br>beställare</h2>
       <p class="sec-intro">Vi är fullt försäkrade och anslutna till ID06. Försäkringsbevis, licenser och utdrag ur bokföringen lämnas på begäran.</p>
     </div>
@@ -138,7 +129,7 @@ MAIN = f"""
 
   <section id="sakerhet" class="process">
     <div class="sec-head reveal">
-      <div class="dim"><span class="dim-label">04 — Så arbetar vi</span><span class="dim-rule"></span></div>
+      <div class="dim"><span class="dim-label">03 — Så arbetar vi</span><span class="dim-rule"></span></div>
       <h2>Ordning och<br>säkerhet</h2>
     </div>
     <div class="steps reveal">
@@ -153,7 +144,6 @@ MAIN = f"""
 
 NAV = """    <nav>
       <a href="./">Startsida</a>
-      <a href="#team">Teamet</a>
       <a href="#fakta">Företagsfakta</a>
       <a href="takskottning.html">Takskottning</a>
     </nav>"""
