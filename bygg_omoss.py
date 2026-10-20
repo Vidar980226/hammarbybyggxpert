@@ -76,7 +76,8 @@ MAIN = f"""
           <li>Registrerat 1987</li>
           <li>Godkänd för F-skatt</li>
           <li>26 års branscherfarenhet i arbetsledningen</li>
-          <li>Ansvars- och entreprenadförsäkring</li>
+          <li>Fullt försäkrade: ansvars- och entreprenadförsäkring</li>
+          <li>Anslutna till ID06</li>
           <li>Licens enligt Skotta säkert</li>
         </ul>
       </div>
@@ -116,7 +117,7 @@ MAIN = f"""
     <div class="sec-head reveal">
       <div class="dim"><span class="dim-label">03 — Företagsfakta</span><span class="dim-rule"></span></div>
       <h2>Uppgifter för<br>beställare</h2>
-      <p class="sec-intro">Försäkringsbevis, licenser och utdrag ur bokföringen lämnas på begäran.</p>
+      <p class="sec-intro">Vi är fullt försäkrade och anslutna till ID06. Försäkringsbevis, licenser och utdrag ur bokföringen lämnas på begäran.</p>
     </div>
     <div class="reveal">
       <table class="fakta">
@@ -129,7 +130,8 @@ MAIN = f"""
         <tr><th>E-post</th><td><a href="mailto:info@hammarbybyggxpert.se">info@hammarbybyggxpert.se</a></td></tr>
         <tr><th>Verksamhet</th><td>Bygg, renovering, entreprenad, fastighetsunderhåll och takskottning</td></tr>
         <tr><th>Verksamhetsområde</th><td>Stockholm, Solna, Sundbyberg, Nacka och Lidingö</td></tr>
-        <tr><th>Försäkringar</th><td>Ansvarsförsäkring och entreprenadförsäkring</td></tr>
+        <tr><th>Försäkringar</th><td>Fullt försäkrade, med ansvarsförsäkring och entreprenadförsäkring</td></tr>
+        <tr><th>ID06</th><td>Anslutna till ID06. Vår personal bär ID06-kort på arbetsplatsen.</td></tr>
       </table>
     </div>
   </section>
