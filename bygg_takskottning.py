@@ -228,6 +228,7 @@ NAV = """    <nav>
       <a href="#priser">Priser</a>
       <a href="#kvarter">Kvartersavtal</a>
       <a href="#sakerhet">Säkerhet</a>
+      <a href="om-oss.html">Om oss</a>
     </nav>"""
 
 ut = s
@@ -238,6 +239,15 @@ ut = re.sub(r"    <nav>.*?</nav>", NAV, ut, count=1, flags=re.S)
 ut = ut.replace('<a href="#top"><img', '<a href="./"><img', 1)
 ut = re.sub(r"<main>.*?</main>", lambda m: MAIN.strip(), ut, count=1, flags=re.S)
 ut = ut.replace("'Förfrågan via hemsidan: '", "'Takskottning via hemsidan: '")
+import json
+SVC = {"@context": "https://schema.org", "@type": "Service", "name": "Takskottning i Stockholm",
+       "serviceType": "Takskottning", "provider": {"@id": "https://hammarbybyggxpert.se/#foretag"},
+       "areaServed": ["Stockholm", "Solna", "Sundbyberg", "Nacka", "Lidingö"],
+       "url": "https://hammarbybyggxpert.se/takskottning.html",
+       "offers": {"@type": "Offer", "name": "Säsongsavtal takskottning 2026/27", "price": "5900",
+                  "priceCurrency": "SEK"}}
+ut = ut.replace("</head>", '<script type="application/ld+json">' + chr(10) + json.dumps(SVC, ensure_ascii=False, indent=1)
+                + chr(10) + "</script>" + chr(10) + "</head>", 1)
 (HÄR / "takskottning.html").write_text(ut, encoding="utf-8", newline="")
 
 # Länk från startsidan: menyn och texten under Fastighetsunderhåll
