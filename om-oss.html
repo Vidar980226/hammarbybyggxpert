@@ -50,6 +50,7 @@
              text-transform:uppercase;color:var(--steel);white-space:nowrap}
 
   /* ---------- topprad ---------- */
+  html{overflow-anchor:none}
   header{position:sticky;top:0;z-index:60;background:rgba(251,250,248,.94);
          backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .bar{display:flex;align-items:center;gap:2rem;padding:1.5rem var(--pad);
@@ -413,9 +414,19 @@
 <script>
   // Logotypen visas stor högst upp och krymper när sidan rullas
   const hdr = document.querySelector('header');
-  const setCompact = () => hdr.classList.toggle('compact', window.scrollY > 40);
+  // Två gränser så att sidhuvudet inte växlar fram och tillbaka när det krymper
+  let compact = false, ticking = false;
+  const setCompact = () => {
+    const y = window.scrollY;
+    if (!compact && y > 120) compact = true;
+    else if (compact && y < 8) compact = false;
+    hdr.classList.toggle('compact', compact);
+    ticking = false;
+  };
   setCompact();
-  window.addEventListener('scroll', setCompact, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(setCompact); }
+  }, { passive: true });
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce && 'IntersectionObserver' in window) {
